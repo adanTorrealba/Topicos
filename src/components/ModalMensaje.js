@@ -55,30 +55,29 @@ const Succes = styled.span`
     <Modal
       {...props}
       size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+        <Modal.Title>
           Enviar Mensaje
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <h4>Rellene el siguiente formulario y le antederemos</h4>
         <Form>
-          <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Group>
             <Form.Label>Nombre</Form.Label>
             <Form.Control type="text" value={nombreContacto} placeholder="Ingrese su nombre" onChange={(e) => setNombreContacto(e.target.value)} />
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlInput2">
+          <Form.Group>
             <Form.Label>Correo Electronico</Form.Label>
             <Form.Control type="email" value={emailContacto} placeholder="Ingrese su correo electronico" onChange={(e) => setEmailContacto(e.target.value)} />
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlInput3">
+          <Form.Group>
             <Form.Label>Numero de Telefono</Form.Label>
             <Form.Control type="text" value={tlfContacto} placeholder="Ingrese su numero telefonico" onChange={(e) => setTlfContacto(e.target.value)} />
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Group>
             <Form.Label>Mensaje</Form.Label>
             <Form.Control as="textarea" rows={3} value={mensajeContacto} placeholder="Ingrese aqui su mensaje" onChange={(e) => setMensajeContacto(e.target.value)} />
           </Form.Group>

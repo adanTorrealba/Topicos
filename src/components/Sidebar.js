@@ -167,7 +167,7 @@ const Titulo = styled.h4`
 // Creando el componente funcional principal para el sidebar
 const Sidebar = (props) => {
 
-  const { handleLogout } = props;
+  const { handleLogout, mostrarModal, setMostrarModal, handleContacto } = props;
 
   // Declarando una variable de estado y una funcion para mostrar y esconder el sidebar
   const [sidebar, setSidebar] = useState(false);
@@ -245,7 +245,7 @@ const Sidebar = (props) => {
 
             <NavbarTextItem to="/" >Home</NavbarTextItem>
             <NavbarTextItem to="/galeria/videos" >Portafolio</NavbarTextItem>
-            <NavbarTextItem to="#">Contacto</NavbarTextItem>
+            <NavbarTextItem to="#" onClick={handleContacto}>Contacto</NavbarTextItem>
 
           </NavbarText>
         </Nav>
@@ -256,7 +256,7 @@ const Sidebar = (props) => {
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>
 
-            <SidebarLink to="#">
+            <SidebarLink to="/perfil">
               <div>
                 <FaIcons.FaUser />
                 <SidebarLabel>{ nombre }</SidebarLabel>
@@ -285,7 +285,7 @@ const Sidebar = (props) => {
             </SidebarLink>
 
             <>
-            <SidebarLink to="/galeria" onClick={ showSubnav }>
+            <SidebarLink to="#" onClick={ showSubnav }>
               <div>
                 <FaIcons.FaArchive />
                 <SidebarLabel>Galerias</SidebarLabel>
@@ -334,13 +334,12 @@ const Sidebar = (props) => {
 
       <Switch>
       <Route path="/" exact>
-         <AdminPage fb={fb} />
+         <AdminPage fb={fb} mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} handleContacto={handleContacto} />
        </Route>
       <Route path="/perfil" exact>
         <PerfilPage fb={fb} nombre={nombre} setNombre={setNombre} nmrTelefono={nmrTelefono} setNmrTelefono={setNmrTelefono} email={email} setEmail={setEmail} password={password} setPassword={setPassword} descripcion={descripcion} setDescripcion={setDescripcion} imgPerfil={imgPerfil} setImgPerfil={setImgPerfil} facebook={facebook} setFacebook={setFacebook} twitter={twitter} setTwitter={setTwitter} instagram={instagram} setInstagram={setInstagram} />
       </Route>
       <Route path="/componentes-web" exact component={ ComponentesPage } />
-      <Route path="/galeria" exact component={ GaleriaPage } />
       <Route path="/galeria/videos" exact>
         <GaleriaVdPage fb={fb} />
       </Route>

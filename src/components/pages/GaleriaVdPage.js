@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // Importando Componentes
-import ModalFormVideo from '../ModalFormVideo'
+import ModalFormVideo2 from '../ModalFormVideo2'
 import ModalReproductorVideo from '../ModalReproductorVideo'
 
 const Titulo = styled.div`
@@ -35,13 +35,21 @@ const GaleriaVdPage = ({fb}) => {
   const [ reproducirVideo, setReproducirVideo ] = useState(false);
   const [ videoReproducido, setVideoReproducido ] = useState('');
   const [ termino, setTermino ] = useState('');
+  const [ nombre, setNombre ] = useState("");
+  const [ categoria, setCategoria ] = useState("");
+  const [ subcategoria, setSubcategoria ] = useState("");
+  const [ plataforma, setPlataforma ] = useState("");
 
   const handleModal = () => {
     setMostrarModal(!mostrarModal);
   };
 
-  const handleReproducirVideo = (enlace) => {
+  const handleReproducirVideo = (enlace, nombre, categoria, subcategoria, plataforma) => {
     setVideoReproducido(enlace);
+    setNombre(nombre);
+    setCategoria(categoria);
+    setSubcategoria(subcategoria);
+    setPlataforma(plataforma);
     setReproducirVideo(!reproducirVideo);
   };
 
@@ -68,7 +76,6 @@ const GaleriaVdPage = ({fb}) => {
         listaVideos.push(video)
       });
       setData(listaVideos);
-      // setData(data.reverse());
     });
     return data;
   };
@@ -84,23 +91,7 @@ const GaleriaVdPage = ({fb}) => {
 
   return (
 
-    <>
-
-      {mostrarModal?
-        <>
-          <ModalFormVideo fb={fb} mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} data={data} />
-          <Contenedor />
-        </>
-      :
-        <>
-        {reproducirVideo ?
-          <>
-            <ModalReproductorVideo reproducirVideo={reproducirVideo} setReproducirVideo={setReproducirVideo} videoReproducido={videoReproducido}/>
-            <Contenedor />
-          </>
-          :
-          <>
-          <Contenedor>
+    <Contenedor>
 
             <Titulo><h1>Galeria de Videos</h1></Titulo>
 
@@ -137,7 +128,7 @@ const GaleriaVdPage = ({fb}) => {
                       <li className="list-group-item bg-secondary">{video.plataforma}</li>
                     </ul>
                     <div className="card-footer">
-                      <button className="btn btn-info" onClick={(e) => handleReproducirVideo(video.enlace)}>Ver</button>
+                      <button className="btn btn-info" onClick={(e) => handleReproducirVideo(video.enlace, video.nombre, video.categoria, video.subcategoria, video.plataforma)}>Ver</button>
                       <button className="btn btn-danger" onClick={(e) => eliminarVideo(video.id)}>Eliminar</button>
                     </div>
                   </Card>
@@ -146,13 +137,11 @@ const GaleriaVdPage = ({fb}) => {
               </div>
             </div>
 
-          </Contenedor>
+        <ModalReproductorVideo show={reproducirVideo} onHide={() => setReproducirVideo(false)} enlace={videoReproducido} nombre={nombre} categoria={categoria} subcategoria={subcategoria} plataforma={plataforma} />
+        <ModalFormVideo2 fb={fb} show={mostrarModal} onHide={() => setMostrarModal(false)} />
 
-          </>}
-        </>
-      }
+    </Contenedor>
 
-    </>
   )
 };
 

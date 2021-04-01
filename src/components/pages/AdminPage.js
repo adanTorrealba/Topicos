@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 // Importando el componente modal
 import ModalMensaje from '../ModalMensaje'
+import ModalReproductorVideo from '../ModalReproductorVideo'
 
 // Importando iconos
 import * as MdIcons from "react-icons/md";
@@ -165,16 +166,58 @@ const H3 = styled.h2`
   transition: .5s ease;
 `;
 
-const MensajeFinal = styled.div`
-  display: flex;
-  height: 15vh;
+const Portafolio = styled.div`
+  display: block;
+  height: 81vh;
   align-items: center;
   justify-content: center;
 `;
 
+const ContenedorImagen = styled.div`
+  overflow: hidden;
+  margin-bottom: -68px;
+  margin-right: -10px;
+
+  &: hover button {
+    opacity: 1;
+  }
+`;
+
+const Img = styled.img`
+  width: 500px;
+  height: 300px;
+  transition: transform .5s ease-in-out;
+
+  &: hover {
+    opacity: 0.6;
+    transform: scale(3) rotate(25deg);
+  }
+`;
+
+const BotonPortafolio = styled.button`
+  margin-top: -200px;
+  margin-left: 117px;
+  transition: .5s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  &: hover {
+    font-size: 1.2rem;
+    filter: opacity(1);
+  }
+`;
+
+const H1 = styled.h1`
+  margin-top: 50px;
+`;
+const Subtitulo = styled.h5`
+  margin-bottom: 50px;
+`;
+
 const AdminPage = (props) => {
 
-  const { fb } = props;
+  const { fb, mostrarModal, setMostrarModal, handleContacto } = props;
 
   const adanID = "3rI1tG3cRKUhEPvMAVsTiNed7yM2";
   const sebasID = "8QkUF41WragGy48IHJXFp1DnLnP2";
@@ -183,11 +226,40 @@ const AdminPage = (props) => {
   const [ nombreSebas, setNombreSebas ] = useState("");
   const [ descripcionAdan, setDescripcionAdan ] = useState("");
   const [ descripcionSebas, setDescripcionSebas ] = useState("");
-  const [ mostrarModal, setMostrarModal ] = useState(false);
   const [ nombreContacto, setNombreContacto ] = useState("");
   const [ tlfContacto, setTlfContacto ] = useState("");
   const [ emailContacto, setEmailContacto ] = useState("");
   const [ mensajeContacto, setMensajeContacto ] = useState("");
+  const [ reproducirVideo, setReproducirVideo] = useState(false);
+  const [ link, setLink] = useState("");
+  const [ nombreVideo, setNombreVideo ] = useState("");
+  const [ categoria, setCategoria ] = useState("");
+  const [ subcategoria, setSubcategoria ] = useState("");
+  const [ plataforma, setPlataforma ] = useState("");
+
+  const [ data, setData ] = useState([]);
+  const listaVideos = [];
+
+  const cargarVideos = () => {
+
+    fb.database().ref('videos').on("value", snapshot => {
+      snapshot.forEach((snap) => {
+        const video = {
+          id: snap.key,
+          nombre: snap.val().nombre,
+          categoria: snap.val().categoria,
+          subcategoria: snap.val().subcategoria,
+          plataforma: snap.val().plataforma,
+          image: snap.val().image,
+          enlace: snap.val().enlace
+        };
+
+        listaVideos.push(video)
+      });
+      setData(listaVideos);
+    });
+    return data;
+  };
 
   useEffect(() => {
 
@@ -203,10 +275,19 @@ const AdminPage = (props) => {
       setDescripcionSebas(snapshot.val().descripcion)
     });
 
+    cargarVideos();
+
   }, [])
 
-  const handleContacto = () => {
-    setMostrarModal(! mostrarModal)
+
+
+  const handleVideo = (enlace, nombre, categoria, subcategoria, plataforma) => {
+    setLink(enlace);
+    setNombreVideo(nombre);
+    setCategoria(categoria);
+    setSubcategoria(subcategoria);
+    setPlataforma(plataforma);
+    setReproducirVideo(! reproducirVideo);
   }
 
   return (
@@ -283,11 +364,22 @@ const AdminPage = (props) => {
         </ContenedorServicio>
       </div>
 
-      <MensajeFinal>
-        <h2>Siempre al alcance de tu mano y dispuestos a servirte.</h2>
-      </MensajeFinal>
+      <H1>Portafolio de trabajos</H1>
+      <Subtitulo>Puede echarle un vistazo a algunos de nuestros proyectos</Subtitulo>
+
+      <Portafolio>
+        <div className="row">
+          {data.map((video) => (
+            <ContenedorImagen className="col-sm-3">
+              <Img src={video.image} />
+              <BotonPortafolio className="btn btn-dark" onClick={(e) => handleVideo(video.enlace, video.nombre, video.categoria, video.subcategoria, video.plataforma)} >Ver proyecto</BotonPortafolio>
+            </ContenedorImagen>
+          ))}
+        </div>
+      </Portafolio>
 
       <ModalMensaje fb={fb} show={mostrarModal} onHide={() => setMostrarModal(false)} nombreContacto={nombreContacto} setNombreContacto={setNombreContacto} tlfContacto={tlfContacto} setTlfContacto={setTlfContacto} emailContacto={emailContacto} setEmailContacto={setEmailContacto} mensajeContacto={mensajeContacto} setMensajeContacto={setMensajeContacto} />
+      <ModalReproductorVideo show={reproducirVideo} onHide={() => setReproducirVideo(false)} enlace={link} nombre={nombreVideo} categoria={categoria} subcategoria={subcategoria} plataforma={plataforma} />
 
     </>
   )

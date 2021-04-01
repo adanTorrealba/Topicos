@@ -1,0 +1,184 @@
+{
+  "mensajes" : [ null, {
+    "contacto" : "Sebastian Alvarez",
+    "correo" : "sebalvarezch@gmail.com",
+    "mensaje" : "Segundo mensaje almacenado",
+    "status" : "No Leido",
+    "telefono" : "04244532666"
+  }, {
+    "contacto" : "May",
+    "correo" : "may@gmail.com",
+    "id" : "2",
+    "mensaje" : "Tercer mensaje almacenado en la base de datos",
+    "status" : "Leido",
+    "telefono" : "04243219542"
+  }, {
+    "contacto" : "Maria",
+    "correo" : "maria@gmail.com",
+    "mensaje" : "mensaje de maria",
+    "status" : "Leido",
+    "telefono" : "04125555555"
+  }, {
+    "contacto" : "Elmo",
+    "correo" : "Elmoxd@gmail.com",
+    "id" : "4",
+    "mensaje" : "Elmo siempre te observa, elmo sabe donde vives",
+    "status" : "Leido",
+    "telefono" : "04160000000"
+  }, {
+    "contacto" : "Steve",
+    "correo" : "Stevemc@gmail.com",
+    "mensaje" : "Soy un minero",
+    "status" : "No Leido",
+    "telefono" : "04120000000"
+  }, {
+    "contacto" : "Iroman",
+    "correo" : "Iroman@hotmail.com",
+    "id" : "6",
+    "mensaje" : "I'm Iroman.",
+    "status" : "Leido",
+    "telefono" : "04240000000"
+  }, {
+    "contacto" : "Maria",
+    "correo" : "maria2010@gmail.com",
+    "id" : "7",
+    "mensaje" : "Hola buenas tardes",
+    "status" : "Leido",
+    "telefono" : "04241231212"
+  }, {
+    "contacto" : "google",
+    "correo" : "googlesuport@gmail.com",
+    "mensaje" : "Se ha iniciado sesion desde tu cuenta, verifica que eres tu",
+    "status" : "No Leido",
+    "telefono" : "04267362413"
+  }, null, {
+    "contacto" : "Adán Torrealba",
+    "correo" : "adan_e_torrealba@hotmail.com",
+    "id" : "10",
+    "mensaje" : "Yo originalmente era el primer mensaje almacenado",
+    "status" : "No leido",
+    "telefono" : "04144823887"
+  } ],
+  "usuarios" : {
+    "3rI1tG3cRKUhEPvMAVsTiNed7yM2" : {
+      "descripcion" : "Principalmente me gusta la programacion de videojuegos, aunque tambien se un poco de programacion web, los lenguajes que conozco son javascript, java, y con el que me siento mas comodo es python.",
+      "email" : "adan_e_torrealba@hotmail.com",
+      "facebook" : "https://www.facebook.com",
+      "imgPerfil" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesUsuarios%2F3rI1tG3cRKUhEPvMAVsTiNed7yM2.jpg?alt=media&token=03e7554a-019c-43a3-825b-f2fea0a62d38",
+      "instagram" : "https://www.instagram.com/_eduart/?hl=es-la",
+      "nmrTelefono" : "0412555555",
+      "nombre" : "Adan Torrealba",
+      "password" : "19092000",
+      "twitter" : "https://twitter.com/__Eduart__"
+    },
+    "8QkUF41WragGy48IHJXFp1DnLnP2" : {
+      "descripcion" : "Entusiasta de la programación y el networking. Los lenguajes de programacion con los que he trabajado con Python y Javascript.",
+      "email" : "sebas@gmail.com",
+      "facebook" : "",
+      "imgPerfil" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesUsuarios%2F8QkUF41WragGy48IHJXFp1DnLnP2?alt=media&token=7e371bf4-aedc-48f6-9843-1c564930df80",
+      "instagram" : "",
+      "nmrTelefono" : "0412555555",
+      "nombre" : "Sebastian Alvarez",
+      "password" : "123456",
+      "twitter" : ""
+    }
+  },
+  "videos" : {
+    "-MUG2jNF-6j0ogfI5pjI" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=_A6GI-6_xlY&feature=youtu.be",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FCargar%20archivos%20con%20PHP%20y%20HTML%20(Tutorial)?alt=media&token=8a76771d-b3e9-4ac9-a018-327b1b18c05d",
+      "nombre" : "Cargar archivos con PHP y HTML (Tutorial)",
+      "plataforma" : "HTML",
+      "subcategoria" : "Tutorial"
+    },
+    "-MUG3YM1cvCHnD3fl7yJ" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=01VmMMLfQ2k&feature=youtu.be",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FTienda%20Virtual%20(Sebastian)?alt=media&token=d47b17a1-e4da-468d-9d1c-35d9d5bb1965",
+      "nombre" : "Tienda Virtual (Sebastian)",
+      "plataforma" : "Python",
+      "subcategoria" : "Tienda"
+    },
+    "-MUG4ekiebSCxJjkb1t1" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=ASTuzMA0N3A&feature=youtu.be",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FTienda%20Virtual%20(Adan)?alt=media&token=2ea7e1da-8d03-4f98-a6fb-d35f13cce6f6",
+      "nombre" : "Tienda Virtual (Adan)",
+      "plataforma" : "Python",
+      "subcategoria" : "Tienda"
+    },
+    "-MUG5PRMbk8Zc2r6tiEQ" : {
+      "categoria" : "Aplicacion de Escritorio",
+      "enlace" : "https://www.youtube.com/watch?v=cUQQEvgx_Rw&feature=youtu.be",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FSimulador%20sistema%20operativo%20movil?alt=media&token=2fa8d71a-ef7c-483d-a4a0-7ed67c54e7b4",
+      "nombre" : "Simulador sistema operativo movil",
+      "plataforma" : "Python",
+      "subcategoria" : "Simulador"
+    },
+    "-MUG6t5PiqV29Zn5XirH" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=d3aI1Dt0Z50&t=886s",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FTutorial%20Modal%20con%20React?alt=media&token=cbd92d85-2c88-4ac0-b175-74a46baaf6b8",
+      "nombre" : "Tutorial Modal con React",
+      "plataforma" : "React Js",
+      "subcategoria" : "Tutorial"
+    },
+    "-MUG7pMAIYV9ANOrBtK2" : {
+      "categoria" : "Aplicacion de Escritorio",
+      "enlace" : "https://www.youtube.com/watch?v=MKvQwraeMyk",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FSimulador%20cajero%20automatico?alt=media&token=05d8838c-fdaf-48f6-ab39-1e83008004a8",
+      "nombre" : "Simulador cajero automatico",
+      "plataforma" : "Python",
+      "subcategoria" : "Simulador"
+    },
+    "-MUG8V2ajPwHiJgRfYF1" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=DuV-hzMobNk&feature=youtu.be",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2F3%20Dise%C3%B1os%20de%20portafolios?alt=media&token=d772ec54-c16e-49df-99db-3717720e10c3",
+      "nombre" : "3 Diseños de portafolios",
+      "plataforma" : "HTML",
+      "subcategoria" : "Portafolio"
+    },
+    "-MUG8lVYDeBDcdwIAnlf" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=10ghkffXRIg&feature=youtu.be",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FDesarrollo%20portafolio%20(Parte%202)?alt=media&token=1062beed-ec8c-4202-8490-b9d43fc16dd7",
+      "nombre" : "Desarrollo portafolio (Parte 2)",
+      "plataforma" : "React Js",
+      "subcategoria" : "Portafolio"
+    },
+    "-MUG9dYlAxBYErODVESE" : {
+      "categoria" : "Aplicacion de Escritorio",
+      "enlace" : "https://www.youtube.com/watch?v=aP-Jcdwqrz0",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FJuego%20snake%20en%20java?alt=media&token=76ff3460-3849-4e5b-ba20-03846c0e5bf2",
+      "nombre" : "Juego snake en java",
+      "plataforma" : "Java",
+      "subcategoria" : "Juego"
+    },
+    "-MUGAIJTtUhEfMCpEgth" : {
+      "categoria" : "Aplicacion de Escritorio",
+      "enlace" : "https://www.youtube.com/watch?v=6M8MBT7La68",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FJuego%20de%20la%20vieja%20en%20python?alt=media&token=5dfb1a7a-f734-4a8a-9cb3-407a1b9117d5",
+      "nombre" : "Juego de la vieja en python",
+      "plataforma" : "Python",
+      "subcategoria" : "Juego"
+    },
+    "-MUGB6oR2zUG-ObnKm4d" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=35f9lCzD8iI",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FBlog%20con%20HTML%20y%20CSS?alt=media&token=220f2df0-f6f2-4089-aeb1-47eff10d5254",
+      "nombre" : "Blog con HTML y CSS",
+      "plataforma" : "HTML",
+      "subcategoria" : "Blog"
+    },
+    "-MUGSnaH_0Dyb_IvJYRS" : {
+      "categoria" : "Aplicacion Web",
+      "enlace" : "https://www.youtube.com/watch?v=aI3E8mQa41w",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/proyecto-topicos-fire.appspot.com/o/imagenesMiniaturas%2FBlog%20React?alt=media&token=17b89cbd-292b-4c83-9e76-2e3937a76d26",
+      "nombre" : "Blog React",
+      "plataforma" : "React Js",
+      "subcategoria" : "Blog"
+    }
+  }
+}

@@ -36,6 +36,8 @@ function App() {
   const [ twitter, setTwitter ] = useState('');
   const [ instagram, setInstagram ] = useState('');
 
+  const [ mostrarModal, setMostrarModal ] = useState(false);
+
   // Declarando la funcion para verificar y mandar los datos del login
   const handleLogin = (e) => {
 
@@ -195,12 +197,16 @@ const guardarDatos = () => {
   });
 }
 
+const handleContacto = () => {
+  setMostrarModal(! mostrarModal)
+}
+
  // Renderizacion
   return (
 
     <div className="App">
       {usuario ?
-        (<Sidebar handleLogout={handleLogout} />)
+        (<Sidebar handleLogout={handleLogout} mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} handleContacto={handleContacto} />)
         :
         (<Form
             nombre={nombre}
@@ -222,7 +228,6 @@ const guardarDatos = () => {
             nmrTelefono={nmrTelefono}
             setNmrTelefono={setNmrTelefono}
             errorNmrTelefono={errorNmrTelefono}
-
         />)
       }
 

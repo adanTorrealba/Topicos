@@ -70,31 +70,31 @@ const RegisterForm = (props) => {
 
         <div className="form-group">
           <label>Nombre</label>
-          <input className="form-control" placeholder="Ingrese su nombre" autoFocus required value={nombre} onChange={(e) => setNombre(e.target.value)} />
+          <input className="form-control" id="nombre-form" placeholder="Ingrese su nombre" autoFocus required value={nombre} onChange={(e) => setNombre(e.target.value)} />
           <Error>{errorNombre}</Error>
         </div>
 
         <div className="form-group">
         <label>Número Telefónico</label>
-        <input className="form-control" placeholder="Ingrese su número telefónico" autoFocus required value={nmrTelefono} onChange={(e) => setNmrTelefono(e.target.value)} />
+        <input className="form-control" id="tlf-form" placeholder="Ingrese su número telefónico" autoFocus required value={nmrTelefono} onChange={(e) => setNmrTelefono(e.target.value)} />
         <Error>{errorNmrTelefono}</Error>
         </div>
 
         <div className="form-group">
           <label>Correo</label>
-          <input type="email" className="form-control" placeholder="Ingrese su correo" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" id="email-form" className="form-control" placeholder="Ingrese su correo" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)} />
           <Error>{errorEmail}</Error>
         </div>
 
         <div className="form-group">
           <label>Contraseña</label>
-          <input type="password" className="form-control" placeholder="Ingrese su contraseña" autoFocus required value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" id="password-form" className="form-control" placeholder="Ingrese su contraseña" autoFocus required value={password} onChange={(e) => setPassword(e.target.value)} />
           <Error>{errorPassword}</Error>
         </div>
 
         <div className="form-group">
           <label>Confirmar Contraseña</label>
-          <input type="password" className="form-control" placeholder="Ingrese su contraseña" autoFocus required value={password2} onChange={confirmPassword} />
+          <input type="password" id="password-confirm-form" className="form-control" placeholder="Ingrese su contraseña" autoFocus required value={password2} onChange={confirmPassword} />
           <Error>{errorPassword2}</Error>
         </div>
 
@@ -113,7 +113,7 @@ const RegisterForm = (props) => {
           </div>
         </div>
 
-        <button onClick={handleRegister} className="btn btn-info">Registrarme</button>
+        <button onClick={handleRegister} className="btn btn-info" id="boton-register">Registrarme</button>
 
       </Formulario>
     </Contenedor>

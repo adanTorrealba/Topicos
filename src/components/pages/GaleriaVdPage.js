@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 // Importando Componentes
-import ModalFormVideo2 from '../ModalFormVideo2'
+import ModalFormVideo from '../ModalFormVideo'
 import ModalReproductorVideo from '../ModalReproductorVideo'
 
 const Titulo = styled.div`
@@ -138,7 +138,7 @@ const GaleriaVdPage = ({fb}) => {
             </div>
 
         <ModalReproductorVideo show={reproducirVideo} onHide={() => setReproducirVideo(false)} enlace={videoReproducido} nombre={nombre} categoria={categoria} subcategoria={subcategoria} plataforma={plataforma} />
-        <ModalFormVideo2 fb={fb} show={mostrarModal} onHide={() => setMostrarModal(false)} />
+        <ModalFormVideo fb={fb} show={mostrarModal} onHide={() => setMostrarModal(false)} />
 
     </Contenedor>
 

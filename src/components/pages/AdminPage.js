@@ -168,14 +168,14 @@ const H3 = styled.h2`
 
 const Portafolio = styled.div`
   display: block;
-  height: 81vh;
+  height: 91vh;
   align-items: center;
   justify-content: center;
 `;
 
 const ContenedorImagen = styled.div`
   overflow: hidden;
-  margin-bottom: -68px;
+  margin-bottom: -20px;
   margin-right: -10px;
 
   &: hover button {

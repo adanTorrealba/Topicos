@@ -67,26 +67,26 @@ const Succes = styled.span`
         <Form>
           <Form.Group>
             <Form.Label>Nombre</Form.Label>
-            <Form.Control type="text" value={nombreContacto} placeholder="Ingrese su nombre" onChange={(e) => setNombreContacto(e.target.value)} />
+            <Form.Control type="text" id="nombre-contacto" value={nombreContacto} placeholder="Ingrese su nombre" onChange={(e) => setNombreContacto(e.target.value)} />
           </Form.Group>
           <Form.Group>
             <Form.Label>Correo Electronico</Form.Label>
-            <Form.Control type="email" value={emailContacto} placeholder="Ingrese su correo electronico" onChange={(e) => setEmailContacto(e.target.value)} />
+            <Form.Control type="email" id="email-contacto" value={emailContacto} placeholder="Ingrese su correo electronico" onChange={(e) => setEmailContacto(e.target.value)} />
           </Form.Group>
           <Form.Group>
             <Form.Label>Numero de Telefono</Form.Label>
-            <Form.Control type="text" value={tlfContacto} placeholder="Ingrese su numero telefonico" onChange={(e) => setTlfContacto(e.target.value)} />
+            <Form.Control type="text" id="tlf-contacto"  value={tlfContacto} placeholder="Ingrese su numero telefonico" onChange={(e) => setTlfContacto(e.target.value)} />
           </Form.Group>
           <Form.Group>
             <Form.Label>Mensaje</Form.Label>
-            <Form.Control as="textarea" rows={3} value={mensajeContacto} placeholder="Ingrese aqui su mensaje" onChange={(e) => setMensajeContacto(e.target.value)} />
+            <Form.Control as="textarea" id="mensaje-contacto" rows={3} value={mensajeContacto} placeholder="Ingrese aqui su mensaje" onChange={(e) => setMensajeContacto(e.target.value)} />
           </Form.Group>
         </Form>
       </Modal.Body>
       <Modal.Footer>
         <Error>{error}</Error>
         <Succes>{succes}</Succes>
-        <Button variant="info" type="submit" onClick={handleEnviar}>Enviar Mensaje</Button>
+        <Button variant="info" type="submit" id="enviar-mensaje" onClick={handleEnviar}>Enviar Mensaje</Button>
       </Modal.Footer>
     </Modal>
   );
